@@ -1,9 +1,15 @@
-CREATE TABLE some_data
+CREATE TABLE home
 (
-    Column1 TEXT,
-    Column2 INT,
-    Column3 DECIMAL,
-    Column4 TEXT
+    sell   TEXT,
+    list   TEXT,
+    living TEXT,
+    rooms  TEXT,
+    beds   TEXT,
+    baths  TEXT,
+    age    TEXT,
+    acres  TEXT,
+    taxes  TEXT
 );
 
-COPY some_data FROM '/docker-entrypoint-initdb.d/data.csv' DELIMITER ';' NULL '' CSV HEADER;
+COPY home (sell, list, living, rooms, beds, baths, age, acres, taxes)
+    FROM '/docker-entrypoint-initdb.d/homes.csv' DELIMITER ',' CSV HEADER;
