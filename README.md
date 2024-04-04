@@ -1,5 +1,9 @@
 # Import Data from Large CSV File
 
+## Prerequisites
+
+- Docker
+
 ## Run the project
 
 ```shell
